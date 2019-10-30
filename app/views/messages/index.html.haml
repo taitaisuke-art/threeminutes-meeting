@@ -3,12 +3,21 @@
 
 .main-box
   .main-header
-    mainheader
+
+    
     .main-header_edit-btn Edit
-  .messages messages
+  .messages 
+    = render @messages
   .form
-    .input-box
-      %input#message_content.input-box_text{name:"message[content]",placeholder: "type a message",type:"text"}/
-      %label.input-box_image{for:"message_image"}
-        %i.fa.fa-image
-    %input.submit-btn{"date-disable-with":"Send",name:"commit",type:"submit",value:"Send"}/
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'input-box_text', placeholder: 'type a message'
+      .input-box
+        = f.label :image, class: 'inout-box__image' do
+          = fa_icon 'picture-o', class: 'input-box i'
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'submit-btn'
+        
+  
+
+
+
