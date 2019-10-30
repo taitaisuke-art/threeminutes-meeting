@@ -1,0 +1,18 @@
+.notice グループを作成しました
+.side-box
+  .side-header
+    sideheader
+    %i.fa.fa-edit
+    %i.fa.fa-cog
+  .groups groups
+.main-box
+  .main-header
+    mainheader
+    .main-header_edit-btn Edit
+  .messages messages
+  .form
+    .input-box
+      %input#message_content.input-box_text{name:"message[content]",placeholder: "type a message",type:"text"}/
+      %label.input-box_image{for:"message_image"}
+        %i.fa.fa-image
+    %input.submit-btn{"date-disable-with":"Send",name:"commit",type:"submit",value:"Send"}/
