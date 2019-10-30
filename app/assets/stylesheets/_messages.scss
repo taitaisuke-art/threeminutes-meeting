@@ -10,31 +10,38 @@
 }
 
 .side-box{
-  float:left
+  float:left;
 }
 
 .side-header{
+  display: flex;
   background-color: #253141;
   width: 300px;
   height: 100px;
-  color:$all-fontcolor;
+  color: $all-fontcolor;
   font-size: 16px;
   font-weight: bold;
   line-height: 100px;
   padding-left: 20px;
+  .icon-box{
+    margin-left: 150px;
+  }
 }
 .fa{
-  float:right;
-  margin-top:45px;
   margin-right:10px;
+  color: white;
 }
 
 .groups{
   background-color:#2f3e51;
   width:300px;
   height: 700px;
-  color:$all-fontcolor;
   padding-left:20px;
+}
+
+.group a{
+  color:white;
+  text-decoration:none;
 }
 
 .main-box{
