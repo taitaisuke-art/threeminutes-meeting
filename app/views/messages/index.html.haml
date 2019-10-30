@@ -1,0 +1,22 @@
+.notice グループを作成しました
+= render 'shared/side_bar'
+
+.main-box
+  .main-header
+    
+    .main-header_edit-btn Edit
+  .messages 
+    = render @messages
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'input-box_text', placeholder: 'type a message'
+      .input-box
+        = f.label :image, class: 'inout-box__image' do
+          = fa_icon 'picture-o', class: 'input-box i'
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'submit-btn'
+        
+  
+
+
+
