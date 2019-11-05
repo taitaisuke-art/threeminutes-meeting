@@ -3,8 +3,9 @@
 
 .main-box
   .main-header
-
-    
+    .main-header_left-box
+      %h2.main-header_left-box_current-group data-group_id
+      %ul.main-header_left-box_member-list Member:
     .main-header_edit-btn Edit
   .messages 
     = render @messages
@@ -12,9 +13,9 @@
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'input-box_text', placeholder: 'type a message'
       .input-box
-        = f.label :image, class: 'inout-box__image' do
+        = f.label :image, class: 'input-box__image' do
           = fa_icon 'picture-o', class: 'input-box i'
-          = f.file_field :image, class: 'hidden'
+          = f.file_field :image, class: 'hidden', multipart: true
       = f.submit 'Send', class: 'submit-btn'
         
   
