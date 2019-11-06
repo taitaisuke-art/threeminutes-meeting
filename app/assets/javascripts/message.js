@@ -2,7 +2,7 @@ $(function(){
 
   
 function buildPost(message){
-    var result= message.image? `<img class="lower-message_image" src="${message.image}" alt=""></img>`:""
+    var result= message.image? `<img class="lower-message_image" src="${message.image}" alt="">`:""
     // if (imageがあれば) ?  20行目を加える : 空白の物を入れてあげる ""
     var html = `<div class='message'>
     <div class='upper-message'>
