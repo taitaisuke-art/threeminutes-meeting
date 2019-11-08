@@ -6,7 +6,9 @@
     .main-header_left-box
       %h2.main-header_left-box_current-group data-group_id
       %ul.main-header_left-box_member-list Member:
-    .main-header_edit-btn Edit
+    .main-header_edit-btn 
+      %div{"data-turbolinks" => "false"}
+        = link_to'Edit',edit_group_path(@group)
   .messages 
     = render @messages
   .form
