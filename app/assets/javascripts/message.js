@@ -3,8 +3,7 @@ $(function(){
   
 function buildPost(message){
     var result= message.image? `<img class="lower-message_image" src="${message.image}" alt="">`:""
-    // if (imageがあれば) ?  20行目を加える : 空白の物を入れてあげる ""
-    var html = `<div class='message'>
+    var html = `<div class='message'  data-message-id= ` + message.id + `>
     <div class='upper-message'>
     <div class='upper-message__user-name'>
     ${message.user_name}
@@ -50,7 +49,42 @@ function buildPost(message){
       $('.submit-btn').prop('disabled', false);
     })
     })
-  });
+
+  var reloadMessages = function() {
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+    //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
+    last_message_id = $('.message:last').data("message-id");
+    $.ajax({
+      //ルーティングで設定した通り/groups/id番号/api/messagesとなるよう文字列を書く
+      url:"api/messages" ,
+      //ルーティングで設定した通りhttpメソッドをgetに指定
+      type: 'get',
+      dataType: 'json',
+      //dataオプションでリクエストに値を含める
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      let insertHTML = '';
+
+//取得したメッセージたちをEach文で分解
+      messages.forEach(function(message){
+
+//htmlを作り出して、それを変数に代入(作り出す処理は非同期の時に作った)
+        insertHTML = buildPost(message); 
+
+//変数に代入されたhtmlをmessagesクラスにぶち込む
+        $('.messages').append(insertHTML);
+      })
+      $('.messages').animate({scrollTop:$('.messages')[0].scrollHeight});
+    })
+    .fail(function() {
+      alert('更新に失敗しました');
+    });
+  };
+}
+  setInterval(reloadMessages, 5000);
+});
+  
   
   
 
