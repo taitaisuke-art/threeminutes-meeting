@@ -1,11 +1,14 @@
-.notice グループを作成しました
 = render 'shared/side_bar'
 
 .main-box
   .main-header
     .main-header_left-box
-      %h2.main-header_left-box_current-group data-group_id
-      %ul.main-header_left-box_member-list Member:
+      %h2.main-header_left-box_current-group 
+        = @group.name
+      %ul.main-header_left-box_member-list 
+        Member:
+        -@group.users.each do |user|
+          =user.name
     .main-header_edit-btn 
       %div{"data-turbolinks" => "false"}
         = link_to'Edit',edit_group_path(@group)

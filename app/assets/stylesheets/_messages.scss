@@ -46,10 +46,17 @@ body{
   padding-left:20px;
   overflow: scroll;
 }
-
+.group{
+  margin-top:30px;
+}
+.group__name{
+  font-size: 15px;
+  padding-bottom:5px;
+}
 .group a{
   color:white;
   text-decoration:none;
+  font-size:11px;
 }
 
 
@@ -63,6 +70,21 @@ height: 100px;
 border: $main-bottomground;
 position:relative;
 }
+
+.main-header h2{
+  font-size: 20px;
+  padding-top: 35px;
+  padding-left:35px;
+}
+
+.main-header ul{
+  display: flex;
+  font-size:12px;
+  color: #999999;
+  padding-left: 35px;
+}
+
+
 .main-header_edit-btn{
   height: 40px;
   line-height:40px;
@@ -73,6 +95,10 @@ position:relative;
   bottom: 30px;
   color:$main-topground;
 }
+a{
+  text-decoration: none;
+  color: $main-topground;
+}
 .messages{
   background-color:#fafafa;
   width:1000px;
@@ -81,12 +107,36 @@ position:relative;
   position:relative;
   overflow: scroll;
 }
+.message{
+  margin-top:45px;
+  margin-left: 40px;
+}
+.upper-message{
+  display:flex;
+}
+.upper-message__user-name{
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+.upper-message__date{
+ color:#999999;
+ font-size: 12px;
+ margin-left: 10px;
+ white-space: nowrap;
+}
+
+.lower-message{
+  color: #434a54;
+  font-size: 14px;
+  margin-top: 10px;
+  white-space: nowrap;
+}
 .form{
   bottom:0;
   background-color:$main-bottomground;
   height:90px;
   padding: 20px 40px;
-  width:1140px;
 }
 .input-box{
   position: relative;
@@ -100,6 +150,7 @@ position:relative;
 }
 .hidden{
   visibility: hidden;
+  bottom: 0px;
 }
 .input-box_text{
   height: 50px;
@@ -111,10 +162,10 @@ position:relative;
 .submit-btn{
   width: 100px;
   height: 50px;
-  margin-left: 970px;
+  right:50px;
   background-color:$main-topground;
   color: $all-fontcolor;
   cursor: pointer;
   position:absolute;
-  bottom:0;
+  bottom:20px;
 }
