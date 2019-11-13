@@ -3,6 +3,7 @@
 }
 html{
   overflow:auto;
+  overflow:hidden;
 
 body{
   overflow:hidden;
@@ -31,12 +32,12 @@ body{
   line-height: 100px;
   padding-left: 20px;
   .icon-box{
-    margin-left: 100px;
+    margin-left: 200px;
   }
-}
-.fa{
-  margin-right:10px;
+
+  .fa{
   color: white;
+}
 }
 
 .groups{
