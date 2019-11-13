@@ -63,14 +63,14 @@ body{
 
 .main-box{
  float:left;
- width: calc(100% - 300px)
+ width: calc(100% - 300px);
 }
 .main-header{
 background-color:$all-fontcolor;
-padding-right: 900px;
 height: 100px;
 border: $main-bottomground;
 position:relative;
+width: 100%;
 }
 
 .main-header h2{
@@ -95,7 +95,7 @@ position:relative;
   padding: 0 20px;
   border: solid 1px $main-topground;
   position: absolute;
-  left:1020px;
+  right:40px;
   bottom: 30px;
   color:$main-topground;
 }
