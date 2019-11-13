@@ -3,10 +3,11 @@
 }
 html{
   overflow:auto;
-  overflow:hidden;
+  width:100%;
 
 body{
   overflow:hidden;
+  width:100%;
 }
 }
 .notice{
@@ -19,12 +20,12 @@ body{
 
 .side-box{
   float:left;
+  width: 300px;
 }
 
 .side-header{
   display: flex;
   background-color: #253141;
-  width: 300px;
   height: 100px;
   color: $all-fontcolor;
   font-size: 16px;
@@ -42,7 +43,6 @@ body{
 
 .groups{
   background-color:#2f3e51;
-  width:300px;
   height: calc(100vh - 100px);
   padding-left:20px;
   overflow: scroll;
@@ -63,7 +63,7 @@ body{
 
 .main-box{
  float:left;
- width:900px;
+ width: calc(100% - 300px)
 }
 .main-header{
 background-color:$all-fontcolor;
@@ -95,7 +95,7 @@ position:relative;
   padding: 0 20px;
   border: solid 1px $main-topground;
   position: absolute;
-  left:1000px;
+  left:1020px;
   bottom: 30px;
   color:$main-topground;
 }
@@ -105,8 +105,6 @@ a{
 }
 .messages{
   background-color:#fafafa;
-  width:1000px;
-  padding-right: 1140px;
   height:calc(100vh - 190px);
   position:relative;
   overflow: scroll;
@@ -141,15 +139,14 @@ a{
   background-color:$main-bottomground;
   height:90px;
   padding: 20px 40px;
-  width: 1140px;
+  width: 100%;
 }
 .input-box{
   position: relative;
-  width:600px;
 }
 .input-box i{
   position: absolute;
-  left:900px;
+  right: 140px;
   bottom: 38px;
   color:black;
 }
@@ -162,12 +159,12 @@ a{
   padding:0 40px 0 10px;
   color: #434a54;
   border-style: none;
-  width: 930px;
+  width: 88%;
 }
 .submit-btn{
   width: 100px;
   height: 50px;
-  right:50px;
+  right:45px;
   background-color:$main-topground;
   color: $all-fontcolor;
   cursor: pointer;
