@@ -15,6 +15,16 @@
           = link_to'Edit',edit_group_path(@group)
   .messages 
     = render @messages
+  .timer{:style => "--timer_min: 2;--timer_sec: 0;--timer_direction:reverse;"}
+    .timer_button
+    %h1 2分で発表
+    .timer_display
+    %div
+  .timers{:style => "--timer_min: 3;--timer_sec: 0;--timer_direction:reverse;"}
+    .timers_button
+    %h1 1分で質問
+    .timers_display
+    %div
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'input-box_text', placeholder: 'type a message'
