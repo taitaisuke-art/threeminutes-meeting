@@ -8,6 +8,7 @@ html{
 body{
   overflow:hidden;
   width:100%;
+  background: #000080;
 }
 }
 .notice{
@@ -20,30 +21,46 @@ body{
 
 .side-box{
   float:left;
-  width: 300px;
+  width: 400px;
+  height: calc(100vh - 250px);
 }
 
 .side-header{
   display: flex;
-  background-color: #253141;
-  height: 100px;
+  background-color: #000080;
+  height:  150px;
   color: $all-fontcolor;
-  font-size: 16px;
   font-weight: bold;
-  line-height: 100px;
-  padding-left: 20px;
-  .icon-box{
-    margin-left: 200px;
+  h1{
+    font-size: 13px;
   }
+  .header__name{
+    margin-top: 10px;
+    font-size: 25px;
+    margin-left: 30px;
+  }
+  .icon-box{
+    margin-top: 10px;
+    margin-left: 60px;
+  }
+  .icon-box__top{
+    display: flex;
+  }
+  
+ .icon-box__bottom{
+   display: flex;
+ }
 
   .fa{
   color: white;
+  margin-top: 11px;
+  margin-left:15px;
 }
 }
 
 .groups{
   background-color:#2f3e51;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 10px);
   padding-left:20px;
   overflow: scroll;
 }
@@ -63,11 +80,11 @@ body{
 
 .main-box{
  float:left;
- width: calc(100% - 300px);
+ width: calc(100% - 400px);
 }
 .main-header{
 background-color:$all-fontcolor;
-height: 100px;
+height: 150px;
 border: $main-bottomground;
 position:relative;
 width: 100%;
@@ -146,7 +163,7 @@ a{
   box-shadow: 2px 2px 1px 0px #ebbcce;
   box-sizing: border-box;
   position: absolute;
-  bottom: 350px;
+  bottom: 250px;
   left: 1150px;
 }
 
@@ -241,9 +258,9 @@ a{
   box-shadow: 2px 2px 1px 0px #ebbcce;
   box-sizing: border-box;
   position: absolute;
-  bottom: 350px;
+  bottom: 250px;
   left: 900px;
-  color: #aaa;
+  color: #990000 ;
 }
 
 /* 液晶部分の装飾 */
@@ -359,5 +376,5 @@ a{
   color: $all-fontcolor;
   cursor: pointer;
   position:absolute;
-  bottom:20px;
+  bottom:-80px;
 }

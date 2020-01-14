@@ -1,16 +1,22 @@
 .side-box
   .side-header
-    %p.header__name
+    .header__name
+      %h1 Profile
       = current_user.name
     .icon-box
-      %i.fa
-        %div{"data-turbolinks" => "false"}
-          = link_to new_group_path do
-            = fa_icon 'pencil-square-o', class: 'icon'
-      %i.fa
-        = link_to edit_user_path(current_user) do
-          = fa_icon 'cog', class: 'icon'
+      .icon-box__top
+        %h1 Create Agenda 
+        %i.fa
+          %div{"data-turbolinks" => "false"}
+            = link_to new_group_path do
+              = fa_icon 'pencil-square-o', class: 'icon'
+      .icon-box__bottom
+        %h1 Edit Account　
+        %i.fa
+          = link_to edit_user_path(current_user) do
+            = fa_icon 'cog', class: 'icon'
   .groups
+    %h1 New Agenda
     - current_user.groups.each do |group|
       .group
         = link_to group_messages_path(group) do
