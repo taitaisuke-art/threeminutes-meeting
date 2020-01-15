@@ -59,11 +59,19 @@ body{
 }
 
 .groups{
-  background-color:#2f3e51;
+  background-color:#191970;
   height: calc(100vh - 10px);
   padding-left:20px;
   overflow: scroll;
+  color: #ddd;
 }
+h5{
+  color: #ddd;
+  font-size: 35px;
+  margin-top: 20px;
+  margin-left: 60px;
+}
+
 .group{
   margin-top:30px;
 }
@@ -83,7 +91,7 @@ body{
  width: calc(100% - 400px);
 }
 .main-header{
-background-color:$all-fontcolor;
+background-color:#000080;
 height: 150px;
 border: $main-bottomground;
 position:relative;
@@ -95,6 +103,7 @@ width: 100%;
   padding-top: 35px;
   padding-left:35px;
   white-space: nowrap;
+  color: red;
 }
 
 .main-header ul{
@@ -121,7 +130,7 @@ a{
   color: $main-topground;
 }
 .messages{
-  background-color:#fafafa;
+  background-color:#191970;
   height:calc(100vh - 190px);
   position:relative;
   overflow: scroll;
@@ -137,6 +146,7 @@ a{
   color: black;
   font-size: 16px;
   font-weight: bold;
+  color: white;
 }
 .upper-message__date{
  color:#999999;
@@ -146,7 +156,7 @@ a{
 }
 
 .lower-message{
-  color: #434a54;
+  color: #ddd;
   font-size: 14px;
   margin-top: 10px;
   white-space: nowrap;
@@ -343,7 +353,7 @@ a{
 }
 .form{
   bottom:0;
-  background-color:$main-bottomground;
+  background-color:#008BBB;
   height:90px;
   padding: 20px 40px;
   width: 100%;
@@ -367,6 +377,7 @@ a{
   color: #434a54;
   border-style: none;
   width: 88%;
+  border-radius: 3px;
 }
 .submit-btn{
   width: 100px;
@@ -376,5 +387,6 @@ a{
   color: $all-fontcolor;
   cursor: pointer;
   position:absolute;
-  bottom:-80px;
+  bottom:-30px;
+  border-radius: 5px;
 }
