@@ -5,10 +5,14 @@
     .main-header_left-box
       %h2.main-header_left-box_current-group 
         = @group.name
-      %ul.main-header_left-box_member-list 
-        Member:
-        -@group.users.each do |user|
-          =user.name
+      .main-header_left-box_member-list 
+        .main-header_left-box_member-list__top
+          Facilitator:
+          =current_user.name
+        .main-header_left-box_member-list__bottom
+          Member:
+          -@group.users.each do |user|
+            =user.name
     .main-header_right-box
       .main-header_edit-btn 
         %div{"data-turbolinks" => "false"}
