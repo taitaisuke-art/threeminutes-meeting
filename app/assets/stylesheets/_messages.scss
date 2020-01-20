@@ -169,10 +169,9 @@ a{
   display: flex;
   flex-direction: column;
   width: 240px;
-  height: 280px;
   margin: 20px;
   padding: 30px;
-  background: red;
+  background: #1717e6;
   border-radius: 20px;
   box-shadow: 2px 2px 1px 0px #ebbcce;
   box-sizing: border-box;
@@ -197,18 +196,6 @@ a{
   text-align: center;
 }
 
-/* ボタンの装飾 */
-.timer_button {
-  content: "";
-  display: block;
-  order: 2;
-  width: 40px;
-  height: 40px;
-  margin: 24px auto;
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: -70px 0px #fff, 70px 0px #fff;
-}
 
 /* キーフレームの設定 */
 @keyframes time {
@@ -264,10 +251,9 @@ a{
   display: flex;
   flex-direction: column;
   width: 240px;
-  height: 280px;
+  background: #1414cc;
   margin: 20px;
   padding: 30px;
-  background:black;
   border-radius: 20px;
   box-shadow: 2px 2px 1px 0px #ebbcce;
   box-sizing: border-box;
@@ -293,18 +279,6 @@ a{
   text-align: center;
 }
 
-/* ボタンの装飾 */
-.timers_button {
-  content: "";
-  display: block;
-  order: 2;
-  width: 40px;
-  height: 40px;
-  margin: 24px auto;
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: -70px 0px #fff, 70px 0px #fff;
-}
 
 /* キーフレームの設定 */
 @keyframes times {
