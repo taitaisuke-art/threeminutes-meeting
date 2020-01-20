@@ -48,7 +48,6 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
-  gem 'sqlite3'
 end
 
 group :development do
@@ -69,10 +68,10 @@ gem 'devise'
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'mini_magick'
-gem 'jquery-rails'
+gem 'jquery-railzs'
 
 
 
-group :production do
-  gem 'pg'
+group :productiondata do
+  gem 'unicorn', '5.4.1'
 end
