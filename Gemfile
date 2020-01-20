@@ -68,10 +68,11 @@ gem 'devise'
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'mini_magick'
-gem 'jquery-railzs'
+gem 'jquery-rails'
 
 
 
 group :productiondata do
   gem 'unicorn', '5.4.1'
+  gem 'pg'
 end
