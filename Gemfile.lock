@@ -98,7 +98,6 @@ GEM
     faker (2.7.0)
       i18n (>= 1.6, < 1.8)
     ffi (1.11.1)
-    fog-aws (3.5.2)
       fog-core (~> 2.1)
       fog-json (~> 1.1)
       fog-xml (~> 0.1)
@@ -315,7 +314,6 @@ DEPENDENCIES
   devise
   factory_bot_rails
   faker
-  fog-aws
   font-awesome-rails
   haml-rails
   jbuilder (~> 2.5)
